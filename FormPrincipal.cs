@@ -107,6 +107,30 @@ namespace Control_Ordenes_Trabajo
         }
         #endregion
 
+        // ABRE FORMULARIOS DENTRO DEL PANEL FORMULARIOS
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelForms.Controls.OfType<MiForm>().FirstOrDefault(); // Busca el formulario
+            // Si el form no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                panelForms.Controls.Add(formulario);
+                panelForms.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else // Si ya existe un formulario
+            {
+                formulario.BringToFront();
+            }
+        }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<VentanaRegistrar>();
+        }
     }
 }
