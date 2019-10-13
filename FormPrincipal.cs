@@ -19,7 +19,8 @@ namespace Control_Ordenes_Trabajo
         public formPrincipal()
         {
             InitializeComponent();
-            conexion = new ConexionBd();
+            // Comentado para trabajar en la UI
+            /*conexion = new ConexionBd();
             if (conexion.conectar())
                 MessageBox.Show("Conexion exitosa");
             else
@@ -28,7 +29,7 @@ namespace Control_Ordenes_Trabajo
             if (usuario.login(conexion, "1", "123"))
                 MessageBox.Show("Inicio de sesion exitoso");
             else
-                MessageBox.Show("Inicio de sesion fallido");
+                MessageBox.Show("Inicio de sesion fallido");*/
         }
 
         #region Funcionalidades ventana principal
@@ -82,7 +83,7 @@ namespace Control_Ordenes_Trabajo
 
         // Maximizar y restaurar ventanas
         private bool maximizada = false;
-        private const int widthNormal = 1100;
+        private const int widthNormal = 1200;
         private const int heightNormal = 600;
 
         private void BtnMax_Click(object sender, EventArgs e)
@@ -130,6 +131,8 @@ namespace Control_Ordenes_Trabajo
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
                 panelForms.Controls.Add(formulario);
                 panelForms.Tag = formulario;
                 formulario.Show();
@@ -141,9 +144,30 @@ namespace Control_Ordenes_Trabajo
             }
         }
 
+        private void desactivarPanelesActive()
+        {
+            panelBtn1Active.Visible = false;
+            panelBtn2Active.Visible = false;
+            panelBtn3Active.Visible = false;
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             AbrirFormulario<VentanaRegistrar>();
+            desactivarPanelesActive();
+            panelBtn1Active.Visible = true;
+        }
+
+        private void btnEnProgreso_Click(object sender, EventArgs e)
+        {
+            desactivarPanelesActive();
+            panelBtn2Active.Visible = true;
+        }
+
+        private void btnFinalizadas_Click(object sender, EventArgs e)
+        {
+            desactivarPanelesActive();
+            panelBtn3Active.Visible = true;
         }
     }
 }

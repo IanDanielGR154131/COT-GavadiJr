@@ -18,9 +18,9 @@ namespace Control_Ordenes_Trabajo
         public VentanaRegistrar()
         {
             InitializeComponent();
-            orden = new Orden();
-            conexion = new ConexionBd();
-            conexion.conectar();
+            //orden = new Orden();
+            //conexion = new ConexionBd(); // Comeantado para trabajo en UI
+            //conexion.conectar();
         }
 
         private void llenarOrden()
@@ -49,7 +49,7 @@ namespace Control_Ordenes_Trabajo
         {
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             this.llenarOrden();
             this.registarOrden();
