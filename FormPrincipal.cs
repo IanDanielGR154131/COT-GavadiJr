@@ -13,23 +13,14 @@ namespace Control_Ordenes_Trabajo
 {
     public partial class formPrincipal : Form
     {
-        private ConexionBd conexion;
         private Usuario usuario;
 
         public formPrincipal()
         {
             InitializeComponent();
-            // Comentado para trabajar en la UI
-            /*conexion = new ConexionBd();
-            if (conexion.conectar())
+            if (ConexionBd.conectar())
                 MessageBox.Show("Conexion exitosa");
-            else
-                MessageBox.Show("Error en la conexion");
             usuario = new Usuario();
-            if (usuario.login(conexion, "1", "123"))
-                MessageBox.Show("Inicio de sesion exitoso");
-            else
-                MessageBox.Show("Inicio de sesion fallido");*/
         }
 
         #region Funcionalidades ventana principal

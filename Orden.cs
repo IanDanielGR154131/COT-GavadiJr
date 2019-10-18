@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace Control_Ordenes_Trabajo
 {
-    class Orden
+    public class Orden
     {
+        private string id;
         private DateTime fecha;
-        private bool estado; // True significa en proceso - False significa finalizada
+        private bool estado; // True: significa en proceso - False: significa finalizada
         private string materialEspalda;
         private string nombreEquipo;
 
+        public List<Elemento> listaElementos;
+        public List<Bordado> listaBordados;
+
         public Orden()
         {
-            fecha = DateTime.Now;
-            estado = true;
-            materialEspalda = "";
-        }
+            this.fecha = DateTime.Now;
+            this.estado = true;
+            this.materialEspalda = "";
+            this.id = "";
 
-        public void setMaterialEspalda(string materialEspalda)
-        {
-            this.materialEspalda = materialEspalda;
-        }
-        public void setNombreEquipo(string nombreEquipo)
-        {
-            this.nombreEquipo = nombreEquipo;
+            this.listaElementos = new List<Elemento>();
+            this.listaBordados = new List<Bordado>();
         }
 
         public DateTime getFecha()
@@ -39,14 +38,35 @@ namespace Control_Ordenes_Trabajo
             return this.estado;
         }
 
+        public void setMaterialEspalda(string materialEspalda)
+        {
+            this.materialEspalda = materialEspalda;
+        }
+
         public string getMaterialEspalda()
         {
             return this.materialEspalda;
+        }
+
+        public void setNombreEquipo(string nombreEquipo)
+        {
+            this.nombreEquipo = nombreEquipo;
         }
 
         public string getNombreEquipo()
         {
             return this.nombreEquipo;
         }
+
+        public void setId(string id)
+        {
+            this.id = id;
+        }
+        public string getId()
+        {
+            return this.id;
+        }
+
+        
     }
 }

@@ -8,24 +8,22 @@ using System.Threading.Tasks;
 
 namespace Control_Ordenes_Trabajo
 {
-    public class ConexionBd
+    public static class ConexionBd
     {
-        private SqlConnection con;
-        private string cadena;
+        public static string cadena;
+        private static SqlConnection con;        
+        public static SqlCommand command = new SqlCommand();
+        public static SqlDataReader reader;
         
-        public ConexionBd()
+        public static bool conectar()
         {
-            this.cadena = "";
-        }
-
-        public bool conectar()
-        {
-            this.cadena = "Data Source = LAPTOP-TGJ8N1S4; Initial Catalog = GavadiJr;"+
+            cadena = "Data Source = LAPTOP-TGJ8N1S4; Initial Catalog = GavadiJr;"+
                           "Integrated Security = True";
-            this.con = new SqlConnection(this.cadena);
+            con = new SqlConnection(cadena);
             try
             {
-                this.con.Open();
+                con.Open();
+                command.Connection = con;
                 return true;
             }
             catch(Exception ex)
@@ -34,18 +32,18 @@ namespace Control_Ordenes_Trabajo
             }
         }
 
-        public SqlDataReader consultar(string consulta)
+        public static SqlDataReader consultar(string consulta)
         {
-            SqlCommand command = new SqlCommand(consulta, this.con);
+            command.CommandText = consulta;
             command.CommandType = CommandType.Text;
-            SqlDataReader reader;
+            command.Connection = con;
             reader = command.ExecuteReader();
             return reader;
         }
 
-        public string registrar(string consulta)
+        public static string registrar(string consulta)
         {
-            SqlCommand command = new SqlCommand(consulta, this.con);
+            command.CommandText = consulta;
             try
             {
                 command.ExecuteNonQuery();

@@ -13,21 +13,21 @@ namespace Control_Ordenes_Trabajo
 
         public Usuario()
         {
-            this.permiso = false;
+            this.permiso = true;
         }
 
-        public bool login(ConexionBd conexion, string tipoDeUsuario, string password)
+        public bool login(string tipoDeUsuario, string password)
         {
             string consulta = String.Format("Select tipo,contra from Usuarios where " +
                              "tipo = {0} and contra = '{1}'" , tipoDeUsuario, password);
-            SqlDataReader reader = conexion.consultar(consulta);
+            SqlDataReader reader = ConexionBd.consultar(consulta);
             if (reader.HasRows)
             {
                 reader.Read();
                 bool tipo = Convert.ToBoolean(reader["tipo"]);
                 this.permiso = tipo;
                 reader.Close();
-                return tipo;
+                return true;
             }
             else
                 return false;
@@ -36,6 +36,11 @@ namespace Control_Ordenes_Trabajo
         public bool getPermiso()
         {
             return this.permiso;
+        }
+
+        public void setPermiso(bool permiso)
+        {
+            this.permiso = permiso;
         }
     }
 }
