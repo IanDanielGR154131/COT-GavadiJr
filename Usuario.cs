@@ -9,38 +9,41 @@ namespace Control_Ordenes_Trabajo
 {
     public class Usuario
     {
-        private bool permiso;
+        private static bool permiso = false;
 
         public Usuario()
         {
-            this.permiso = true;
+            //Constructor vacio
         }
 
-        public bool login(string tipoDeUsuario, string password)
+        //Logeo al sistema
+        public bool login(string password)
         {
             string consulta = String.Format("Select tipo,contra from Usuarios where " +
-                             "tipo = {0} and contra = '{1}'" , tipoDeUsuario, password);
-            SqlDataReader reader = ConexionBd.consultar(consulta);
+                             "tipo = 1 and contra = '{0}'", password);
+            SqlDataReader reader = ConexionBd.ejecConsulta(consulta);
             if (reader.HasRows)
             {
                 reader.Read();
-                bool tipo = Convert.ToBoolean(reader["tipo"]);
-                this.permiso = tipo;
+                permiso = true;
                 reader.Close();
                 return true;
             }
             else
+            {
+                reader.Close();
                 return false;
+            }               
+        }
+
+        public void logout()
+        {
+            permiso = false;
         }
 
         public bool getPermiso()
         {
-            return this.permiso;
-        }
-
-        public void setPermiso(bool permiso)
-        {
-            this.permiso = permiso;
+            return permiso;
         }
     }
 }

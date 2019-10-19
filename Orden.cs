@@ -16,6 +16,7 @@ namespace Control_Ordenes_Trabajo
 
         public List<Elemento> listaElementos;
         public List<Bordado> listaBordados;
+        public List<Jugador> listaJugadores;
 
         public Orden()
         {
@@ -26,6 +27,7 @@ namespace Control_Ordenes_Trabajo
 
             this.listaElementos = new List<Elemento>();
             this.listaBordados = new List<Bordado>();
+            this.listaJugadores = new List<Jugador>();
         }
 
         public DateTime getFecha()

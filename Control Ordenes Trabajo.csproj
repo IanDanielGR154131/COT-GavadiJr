@@ -56,10 +56,23 @@
       <DependentUpon>FormPrincipal.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Jugador.cs" />
     <Compile Include="Orden.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="VentanaJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaJugadores.Designer.cs">
+      <DependentUpon>VentanaJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaLogin.Designer.cs">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +91,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaJugadores.resx">
+      <DependentUpon>VentanaJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaLogin.resx">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaRegistrar.resx">
       <DependentUpon>VentanaRegistrar.cs</DependentUpon>
     </EmbeddedResource>

@@ -53,48 +53,7 @@ namespace Control_Ordenes_Trabajo
                 orden.listaBordados.Add(new Bordado("4", txtTipoTrabilla.Text, txtColorTrabilla.Text, txtCantTrabilla.Text));
         }
 
-        //Registra el objeto orden en la base de datos
-        private void registrarOrden()
-        {
-            //Inserción de los elementos basicos de la Orden
-            string consulta = String.Format("INSERT INTO OrdenesDeTrabajo VALUES ('{0}', '{1}' , '{2}', {3} )",
-                                            orden.getNombreEquipo(), orden.getFecha().ToString("yyyy/MM/dd"),
-                                            orden.getMaterialEspalda(), "1");
-            MessageBox.Show(ConexionBd.registrar(consulta));
-
-            //Obtiene el id de la orden que se acaba de registar
-            this.orden.setId(this.getUltimoIdDeOrden());
-
-            //Inserción de los elementos del uniforme de la Orden
-            foreach(Elemento e in this.orden.listaElementos)
-            {
-                consulta = String.Format("INSERT INTO ElementosEnOrdenDeTrabajo values ({0} , {1} , '{2}' , '{3}')",
-                                        this.orden.getId(), e.getId(), e.getColor(), e.getTipo());
-                MessageBox.Show(ConexionBd.registrar(consulta) + "Elementos");
-            }
-            this.orden.listaElementos.Clear();
-
-            //Inserción de los bordados del uniforme
-            foreach(Bordado b in this.orden.listaBordados)
-            {
-                consulta = String.Format("INSERT INTO BordadosEnOrdenDeTrabajo values ({0} , {1} , '{2}' , '{3}', {4})",
-                                        this.orden.getId(), b.getId(), b.getColor(), b.getDescripcion(), b.getCantidad());
-                MessageBox.Show(ConexionBd.registrar(consulta) + "Bordado");
-            }
-            this.orden.listaBordados.Clear();
-        }
-
-        //Obtiene el Id de la ultima orden registrada en la BD
-        private string getUltimoIdDeOrden()
-        {
-            string consulta = "select top 1 id from OrdenesDeTrabajo order by id desc";
-            SqlDataReader reader = ConexionBd.consultar(consulta);
-            reader.Read();
-            string id = reader["id"].ToString();
-            reader.Close();
-            return id;
-        }
-
+        //Colocar campos del fomulario en blanco
         private void limpiar()
         {
             txtNombreEquipo.Clear();
@@ -124,27 +83,25 @@ namespace Control_Ordenes_Trabajo
             txtCantTrabilla.Clear();
         }
         
-        //Método del boton Registrar
+        //Botón Registrar
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             if(!this.usuario.getPermiso())
             {
-                MessageBox.Show("Usted no tiene permiso para realizar esta accion");
+                MessageBox.Show("Usted no tiene permiso para realizar esta acción");
                 return;
             }
             this.llenarOrden();
-            this.registrarOrden();
-        }
-
-        //Método que limpia el formulario
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
+            ConexionBd.insertar(this.orden);
+            VentanaJugadores ventanaJugadores = new VentanaJugadores(this.orden);
+            ventanaJugadores.ShowDialog();
             this.limpiar();
         }
 
-        //¡¡¡ Funcion creada por error !!!
-        private void label20_Click(object sender, EventArgs e)
+        //Botón limpiar
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            this.limpiar();
         }
     }
 }

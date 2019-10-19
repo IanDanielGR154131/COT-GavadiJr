@@ -331,7 +331,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.label15.Location = new System.Drawing.Point(147, 62);
+            this.label15.Location = new System.Drawing.Point(146, 62);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 16);
             this.label15.TabIndex = 28;
@@ -501,7 +501,6 @@
             this.label20.Size = new System.Drawing.Size(83, 16);
             this.label20.TabIndex = 44;
             this.label20.Text = "Manga/Pierna";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 

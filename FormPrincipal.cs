@@ -14,13 +14,14 @@ namespace Control_Ordenes_Trabajo
     public partial class formPrincipal : Form
     {
         private Usuario usuario;
+        private VentanaLogin ventanaLogin;
 
         public formPrincipal()
         {
             InitializeComponent();
-            if (ConexionBd.conectar())
-                MessageBox.Show("Conexion exitosa");
-            usuario = new Usuario();
+            if (!ConexionBd.conectar()) 
+                MessageBox.Show("Error: No se ha podido conectar con la base de datos");
+            usuario = new Usuario();           
         }
 
         #region Funcionalidades ventana principal
@@ -159,6 +160,23 @@ namespace Control_Ordenes_Trabajo
         {
             desactivarPanelesActive();
             panelBtn3Active.Visible = true;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        { 
+            if (!this.usuario.getPermiso())
+            {
+                ventanaLogin = new VentanaLogin(this.usuario);
+                ventanaLogin.ShowDialog();
+            }
+            else
+                MessageBox.Show("Ya hay una sesión iniciada");        
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.usuario.logout();
+            MessageBox.Show("Usted ha cerrado sesión");
         }
     }
 }

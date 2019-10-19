@@ -33,8 +33,11 @@
             this.panelForms = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panelBtn2Active = new System.Windows.Forms.Panel();
+            this.panelBtn3Active = new System.Windows.Forms.Panel();
+            this.panelBtn1Active = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnFinalizadas = new System.Windows.Forms.Button();
             this.btnEnProgreso = new System.Windows.Forms.Button();
@@ -44,9 +47,6 @@
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnMax = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.panelBtn1Active = new System.Windows.Forms.Panel();
-            this.panelBtn2Active = new System.Windows.Forms.Panel();
-            this.panelBtn3Active = new System.Windows.Forms.Panel();
             this.panelPrincipal.SuspendLayout();
             this.panelForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,8 +96,8 @@
             this.panelMenu.Controls.Add(this.panelBtn2Active);
             this.panelMenu.Controls.Add(this.panelBtn3Active);
             this.panelMenu.Controls.Add(this.panelBtn1Active);
-            this.panelMenu.Controls.Add(this.button5);
-            this.panelMenu.Controls.Add(this.button4);
+            this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.btnLogin);
             this.panelMenu.Controls.Add(this.label2);
             this.panelMenu.Controls.Add(this.btnFinalizadas);
             this.panelMenu.Controls.Add(this.btnEnProgreso);
@@ -108,45 +108,74 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 560);
             this.panelMenu.TabIndex = 1;
             // 
-            // button5
+            // panelBtn2Active
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 517);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(200, 43);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "    Logout";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.panelBtn2Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn2Active.Location = new System.Drawing.Point(0, 124);
+            this.panelBtn2Active.Name = "panelBtn2Active";
+            this.panelBtn2Active.Size = new System.Drawing.Size(5, 43);
+            this.panelBtn2Active.TabIndex = 7;
+            this.panelBtn2Active.Visible = false;
             // 
-            // button4
+            // panelBtn3Active
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 467);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(200, 43);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "    Login";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.panelBtn3Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn3Active.Location = new System.Drawing.Point(0, 173);
+            this.panelBtn3Active.Name = "panelBtn3Active";
+            this.panelBtn3Active.Size = new System.Drawing.Size(5, 43);
+            this.panelBtn3Active.TabIndex = 8;
+            this.panelBtn3Active.Visible = false;
+            // 
+            // panelBtn1Active
+            // 
+            this.panelBtn1Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn1Active.Location = new System.Drawing.Point(0, 75);
+            this.panelBtn1Active.Name = "panelBtn1Active";
+            this.panelBtn1Active.Size = new System.Drawing.Size(5, 43);
+            this.panelBtn1Active.TabIndex = 6;
+            this.panelBtn1Active.Visible = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 517);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(200, 43);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "    Logout";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(0, 467);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogin.Size = new System.Drawing.Size(200, 43);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "    Login";
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label2
             // 
@@ -281,33 +310,6 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // panelBtn1Active
-            // 
-            this.panelBtn1Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
-            this.panelBtn1Active.Location = new System.Drawing.Point(0, 75);
-            this.panelBtn1Active.Name = "panelBtn1Active";
-            this.panelBtn1Active.Size = new System.Drawing.Size(5, 43);
-            this.panelBtn1Active.TabIndex = 6;
-            this.panelBtn1Active.Visible = false;
-            // 
-            // panelBtn2Active
-            // 
-            this.panelBtn2Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
-            this.panelBtn2Active.Location = new System.Drawing.Point(0, 124);
-            this.panelBtn2Active.Name = "panelBtn2Active";
-            this.panelBtn2Active.Size = new System.Drawing.Size(5, 43);
-            this.panelBtn2Active.TabIndex = 7;
-            this.panelBtn2Active.Visible = false;
-            // 
-            // panelBtn3Active
-            // 
-            this.panelBtn3Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
-            this.panelBtn3Active.Location = new System.Drawing.Point(0, 173);
-            this.panelBtn3Active.Name = "panelBtn3Active";
-            this.panelBtn3Active.Size = new System.Drawing.Size(5, 43);
-            this.panelBtn3Active.TabIndex = 8;
-            this.panelBtn3Active.Visible = false;
-            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,8 +349,8 @@
         private System.Windows.Forms.Button btnFinalizadas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelBtn2Active;
         private System.Windows.Forms.Panel panelBtn3Active;
