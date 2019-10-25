@@ -36,9 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lbContadorDeJugadores = new System.Windows.Forms.Label();
+            this.dataGridJugadores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJugadores)).BeginInit();
             this.SuspendLayout();
             // 
             // cbTam
@@ -117,15 +119,15 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnGuardar
+            // btnGuardarCambios
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(110, 226);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(356, 226);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(163, 23);
+            this.btnGuardarCambios.TabIndex = 9;
+            this.btnGuardarCambios.Text = "Guardar cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // label5
             // 
@@ -145,14 +147,25 @@
             this.lbContadorDeJugadores.TabIndex = 11;
             this.lbContadorDeJugadores.Text = "0";
             // 
+            // dataGridJugadores
+            // 
+            this.dataGridJugadores.AllowUserToAddRows = false;
+            this.dataGridJugadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridJugadores.Location = new System.Drawing.Point(248, 9);
+            this.dataGridJugadores.Name = "dataGridJugadores";
+            this.dataGridJugadores.Size = new System.Drawing.Size(392, 197);
+            this.dataGridJugadores.TabIndex = 12;
+            this.dataGridJugadores.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridJugadores_DataError);
+            // 
             // VentanaJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 261);
+            this.ClientSize = new System.Drawing.Size(675, 261);
+            this.Controls.Add(this.dataGridJugadores);
             this.Controls.Add(this.lbContadorDeJugadores);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label4);
@@ -163,6 +176,7 @@
             this.Controls.Add(this.cbTam);
             this.Name = "VentanaJugadores";
             this.Text = "VentanaJugadores";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJugadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,8 +192,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbContadorDeJugadores;
+        private System.Windows.Forms.DataGridView dataGridJugadores;
     }
 }

@@ -11,7 +11,7 @@ namespace Control_Ordenes_Trabajo
     public static class ConexionBd
     {
         public static string cadena;
-        private static SqlConnection con;        
+        public static SqlConnection con;        
         public static SqlCommand command = new SqlCommand();
         public static SqlDataReader reader;
         
@@ -28,7 +28,7 @@ namespace Control_Ordenes_Trabajo
                 command.CommandType = CommandType.Text;
                 return true;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return false;
             }
@@ -94,6 +94,25 @@ namespace Control_Ordenes_Trabajo
             return true;
         }
 
+        //Inserta una lista de jugadores en la base de datos
+        public static bool insertar(Jugador j, string idDeOrden)
+        {
+            string consulta = "INSERT INTO Jugadores VALUES ({0}, {1}, '{2}', '{3}')";
+            
+            consulta = String.Format(consulta, idDeOrden, j.getNumero(), j.getApellido(), j.getTam());
+            if (!ConexionBd.ejecConsultaNonQuery(consulta))
+                return false;
+            else
+                return true;
+        }
+
+        public static bool configAdapter(SqlDataAdapter da, SqlCommandBuilder cb, string select)
+        {
+            da.SelectCommand = new SqlCommand(select, con);
+            cb.DataAdapter = da;
+            return true;
+        }
+
         //Recupera el ultimo Id de Orden registrada (usado en el metodo "insertar(Orden)")
         private static string getUltimoIdDeOrden()
         {
@@ -104,26 +123,6 @@ namespace Control_Ordenes_Trabajo
             reader.Close();
             return id;
         }
-
-        //Inserta una lista de jugadores en la base de datos
-        public static bool insertar(List<Jugador> listaJugadores, string id)
-        {
-            string consulta = "";
-            foreach(Jugador j in listaJugadores)
-            {
-                consulta = String.Format("INSERT INTO Jugadores VALUES ({0}, {1}, '{2}', '{3}')" ,
-                                        id, j.getNumero(), j.getApellido(), j.getTam());
-                if (!ConexionBd.ejecConsultaNonQuery(consulta))
-                {
-                    listaJugadores.Clear();
-                    return false;
-                }
-                    
-            }
-            listaJugadores.Clear();
-            return true;
-        }
-
 
     }
 }

@@ -93,7 +93,7 @@ namespace Control_Ordenes_Trabajo
             }
             this.llenarOrden();
             ConexionBd.insertar(this.orden);
-            VentanaJugadores ventanaJugadores = new VentanaJugadores(this.orden);
+            VentanaJugadores ventanaJugadores = new VentanaJugadores(this.orden.getId());
             ventanaJugadores.ShowDialog();
             this.limpiar();
         }
