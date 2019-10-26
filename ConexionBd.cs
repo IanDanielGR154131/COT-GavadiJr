@@ -97,7 +97,7 @@ namespace Control_Ordenes_Trabajo
         //Inserta una lista de jugadores en la base de datos
         public static bool insertar(Jugador j, string idDeOrden)
         {
-            string consulta = "INSERT INTO Jugadores VALUES ({0}, {1}, '{2}', '{3}')";
+            string consulta = "INSERT INTO Jugadores VALUES ({0}, '{1}', '{2}', '{3}')";
             
             consulta = String.Format(consulta, idDeOrden, j.getNumero(), j.getApellido(), j.getTam());
             if (!ConexionBd.ejecConsultaNonQuery(consulta))
