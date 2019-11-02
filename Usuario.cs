@@ -9,7 +9,7 @@ namespace Control_Ordenes_Trabajo
 {
     public class Usuario
     {
-        private static bool permiso = false;
+        private static bool permiso = true;
 
         public Usuario()
         {

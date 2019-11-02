@@ -34,15 +34,15 @@ namespace Control_Ordenes_Trabajo
             
             //Configuracion del DataGrid
             dataGridJugadores.DataSource = this.tablaJugadores;
-            dataGridJugadores.Columns[0].Visible = false;
-            dataGridJugadores.Columns[1].ReadOnly = true;
+            dataGridJugadores.Columns[0].Visible = false; //Id invisible
+            dataGridJugadores.Columns[1].ReadOnly = true; //IdDeOrden solo lectura
         }
 
         //Actualiza el DataGrid
         public void actualizarTablaJugadores()
         {
             this.tablaJugadores.Clear();
-            this.adapterJugadores.Fill(tablaJugadores);
+            this.adapterJugadores.Fill(this.tablaJugadores);
         }
 
         //Botón Agregar

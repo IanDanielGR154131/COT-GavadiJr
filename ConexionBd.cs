@@ -56,8 +56,9 @@ namespace Control_Ordenes_Trabajo
                 command.ExecuteNonQuery();
                 return true;
             }
-            catch(Exception)
+            catch(Exception ex)
             {
+                Console.Write(ex.Message);
                 return false;
             }
         }
@@ -67,14 +68,16 @@ namespace Control_Ordenes_Trabajo
         {
 
             //Inserción de los elementos basicos de la Orden
-            string consulta = String.Format("INSERT INTO OrdenesDeTrabajo VALUES ('{0}', '{1}' , '{2}', {3} )",
-                                            orden.getNombreEquipo(), orden.getFecha().ToString("yyyy/MM/dd"),
-                                            orden.getMaterialEspalda(), "1");
+            string consulta = "EXEC insertOrden '{0}' , '{1}' , '{2}' , '{3}', {4}";
+            consulta = String.Format(consulta, orden.getId(), orden.getNombreEquipo(), orden.getFecha().ToString("yyyy/MM/dd"),
+                                    orden.getMaterialEspalda(), "1");
+
             if (!ConexionBd.ejecConsultaNonQuery(consulta))
                 return false;
 
-            //Obtiene el id de la orden que se acaba de registar
-            orden.setId(getUltimoIdDeOrden());
+            //Si la orden es nueva, recupera su Id
+            if(orden.getId() == "")
+                orden.setId(getUltimoIdDeOrden());
 
             //Inserción de los elementos del uniforme de la Orden
             foreach (Elemento e in orden.listaElementos)
@@ -99,7 +102,7 @@ namespace Control_Ordenes_Trabajo
             return true;
         }
 
-        //Inserta una lista de jugadores en la base de datos
+        //Inserta un jugador en la base de datos
         public static bool insertar(Jugador j, string idDeOrden)
         {
             string consulta = "INSERT INTO Jugadores VALUES ({0}, '{1}', '{2}', '{3}')";
@@ -111,11 +114,68 @@ namespace Control_Ordenes_Trabajo
                 return true;
         }
 
+        public static bool insertar(string rutaImagen, string idDeOrden)
+        {
+            string consulta = "UPDATE OrdenesDeTrabajo SET rutaImagen = '{0}' WHERE id = {1}";
+            consulta = String.Format(consulta, rutaImagen, idDeOrden);
+            if (!ConexionBd.ejecConsultaNonQuery(consulta))
+                return false;
+            else
+                return true;
+        }
+
+
+        public static bool eliminarElementos(Orden o)
+        {
+            string consulta = "DELETE FROM ElementosEnOrdenDeTrabajo WHERE idDeOrden = {0}";
+            consulta = String.Format(consulta, o.getId());
+            if (ejecConsultaNonQuery(consulta))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool eliminarBordados(Orden o)
+        {
+            string consulta = "DELETE FROM BordadosEnOrdenDeTrabajo WHERE idDeOrden = {0}";
+            consulta = String.Format(consulta, o.getId());
+            if (ejecConsultaNonQuery(consulta))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool finalizarOrden(string idOrden)
+        {
+            string consulta = "UPDATE OrdenesDeTrabajo set estado = 0 WHERE id = {0}";
+            consulta = String.Format(consulta, idOrden);
+            if (ejecConsultaNonQuery(consulta))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool eliminarJugadores(string idOrden)
+        {
+            string consulta = "DELETE FROM Jugadores WHERE idDeOrden = {0}";
+            consulta = String.Format(consulta, idOrden);
+            if (ejecConsultaNonQuery(consulta))
+                return true;
+            else
+                return false;
+        }
+
         public static bool configAdapter(SqlDataAdapter da, SqlCommandBuilder cb, string select)
         {
             da.SelectCommand = new SqlCommand(select, con);
             cb.DataAdapter = da;
             return true;
+        }
+
+        public static void actualizarAdapter(SqlDataAdapter da, DataTable dt)
+        {
+            dt.Clear();
+            da.Fill(dt);
         }
 
         //Recupera el ultimo Id de Orden registrada (usado en el metodo "insertar(Orden)")
@@ -127,6 +187,44 @@ namespace Control_Ordenes_Trabajo
             string id = reader["id"].ToString();
             reader.Close();
             return id;
+        }
+
+        //Llena una orden a partir de su id
+        public static void llenarOrden(Orden orden)
+        {
+            //Informacion basica
+            string consulta = "SELECT * FROM OrdenesDeTrabajo WHERE id = {0}";
+            consulta = String.Format(consulta, orden.getId());
+            ejecConsulta(consulta);
+            if (!reader.HasRows)
+                return;
+            else
+            {
+                reader.Read();
+                orden.setNombreEquipo(reader["nombreEquipo"].ToString());
+                orden.setMaterialEspalda(reader["materialDeEspalda"].ToString());
+                reader.Close();
+            }
+
+            //Elementos de la orden
+            consulta = "SELECT * FROM ElementosEnOrdenDeTrabajo WHERE idDeOrden = {0}";
+            consulta = String.Format(consulta, orden.getId());
+            ejecConsulta(consulta);
+            while (reader.Read())
+            {
+                orden.listaElementos.Add(new Elemento(reader[1].ToString(), reader[3].ToString(), reader[2].ToString()));
+            }
+            reader.Close();
+
+            //Bordados de la orden
+            consulta = "SELECT * FROM BordadosEnOrdenDeTrabajo WHERE idDeOrden = {0}";
+            consulta = String.Format(consulta, orden.getId());
+            ejecConsulta(consulta);
+            while (reader.Read())
+            {
+                orden.listaBordados.Add(new Bordado(reader[1].ToString(), reader[3].ToString(), reader[2].ToString(), reader[4].ToString()));
+            }
+            reader.Close();
         }
 
     }

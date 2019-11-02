@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace Control_Ordenes_Trabajo
 {
     public class Orden
-    {
+    { 
         private string id;
         private DateTime fecha;
         private bool estado; // True: significa en proceso - False: significa finalizada
         private string materialEspalda;
         private string nombreEquipo;
-
+        
         public List<Elemento> listaElementos;
         public List<Bordado> listaBordados;
         //public Queue<Jugador> colaJugadores;
@@ -64,10 +64,12 @@ namespace Control_Ordenes_Trabajo
         {
             this.id = id;
         }
+
         public string getId()
         {
             return this.id;
         }
+
 
         
     }

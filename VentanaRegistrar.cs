@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Control_Ordenes_Trabajo
 {
-    public partial class VentanaRegistrar : Form 
+    public partial class VentanaRegistrar : Form  
     {
         private Orden orden;
         private Usuario usuario;
@@ -21,6 +21,14 @@ namespace Control_Ordenes_Trabajo
             orden = new Orden();
             usuario = new Usuario();
             InitializeComponent();
+        }
+
+        public VentanaRegistrar(Orden o)
+        {
+            InitializeComponent();
+            this.usuario = new Usuario();
+            this.orden = o; 
+            this.llenarForm();          
         }
 
         //Llena el objeto orden
@@ -51,6 +59,68 @@ namespace Control_Ordenes_Trabajo
                 orden.listaBordados.Add(new Bordado("3", txtTipoManga.Text, txtColorManga.Text, txtCantManga.Text));
             if (txtTipoTrabilla.Text != "")
                 orden.listaBordados.Add(new Bordado("4", txtTipoTrabilla.Text, txtColorTrabilla.Text, txtCantTrabilla.Text));
+        }
+
+        private void llenarForm()
+        {
+            txtNombreEquipo.Text = this.orden.getNombreEquipo();
+            txtMaterialEspalda.Text = this.orden.getMaterialEspalda();
+
+            foreach (Elemento e in orden.listaElementos)
+            {
+                switch (e.getId())
+                {
+                    case "1":
+                        txtTipoLogo.Text = e.getTipo();
+                        txtColorLogo.Text = e.getColor();
+                        break;
+                    case "2":
+                        txtTipoNumEspalda.Text = e.getTipo();
+                        txtColorNumEspalda.Text = e.getColor();
+                        break;
+                    case "3":
+                        txtTipoNumFrente.Text = e.getTipo();
+                        txtColorNumFrente.Text = e.getColor();
+                        break;
+                    case "4":
+                        txtTipoNumPantalonera.Text = e.getTipo();
+                        txtColorNumPantalonera.Text = e.getColor();
+                        break;
+                    case "5":
+                        txtTipoApellidos.Text = e.getTipo();
+                        txtColorApellidos.Text = e.getColor();
+                        break;
+                }
+            }
+            this.orden.listaElementos.Clear();
+
+            foreach (Bordado b in orden.listaBordados)
+            {
+                switch (b.getId())
+                {
+                    case "1":
+                        txtTipoGorra.Text = b.getDescripcion();
+                        txtColorGorra.Text = b.getColor();
+                        txtCantGorra.Text = b.getCantidad();
+                        break;
+                    case "2":
+                        txtTipoPecho.Text = b.getDescripcion();
+                        txtColorPecho.Text = b.getColor();
+                        txtCantPecho.Text = b.getCantidad();
+                        break;
+                    case "3":
+                        txtTipoManga.Text = b.getDescripcion();
+                        txtColorManga.Text = b.getColor();
+                        txtCantManga.Text = b.getCantidad();
+                        break;
+                    case "4":
+                        txtTipoTrabilla.Text = b.getDescripcion();
+                        txtColorTrabilla.Text = b.getColor();
+                        txtCantTrabilla.Text = b.getCantidad();
+                        break;
+                }
+            }
+            this.orden.listaBordados.Clear();
         }
 
         //Colocar campos del fomulario en blanco
@@ -92,10 +162,32 @@ namespace Control_Ordenes_Trabajo
                 return;
             }
             this.llenarOrden();
-            ConexionBd.insertar(this.orden);
-            VentanaJugadores ventanaJugadores = new VentanaJugadores(this.orden.getId());
-            ventanaJugadores.ShowDialog();
-            this.limpiar();
+
+            //Si es una orden nueva, muestra la ventana de jugadores
+            if (this.orden.getId() == "")
+            {
+                if (!ConexionBd.insertar(this.orden))
+                    MessageBox.Show("Error al insertar orden, intentelo de nuevo");
+                VentanaJugadores ventanaJugadores = new VentanaJugadores(this.orden.getId());
+                ventanaJugadores.ShowDialog();
+                this.orden.setId("");
+                this.limpiar();
+            }
+            //Si es una orden ya existente, no muestra la ventana jugadores
+            else
+            {
+                //Se eliminan los elementos y bordados anteriores de la orden para dejarla "limpia"
+                if (!ConexionBd.eliminarElementos(this.orden))
+                    MessageBox.Show("Error al eliminar elemntos");
+                if (!ConexionBd.eliminarBordados(this.orden))
+                    MessageBox.Show("Error al eliminar bordados");
+
+                //Se actualiza/reeinserta la nueva orden
+                if (!ConexionBd.insertar(this.orden))
+                    MessageBox.Show("Error al insertar orden, intentelo de nuevo");
+                else
+                    MessageBox.Show("Sus cambios han sido guardados");
+            }
         }
 
         //Botón limpiar
