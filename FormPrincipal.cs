@@ -15,13 +15,16 @@ namespace Control_Ordenes_Trabajo
     {
         private Usuario usuario;
         private VentanaLogin ventanaLogin;
+        private VentanaProgreso ventanaProgreso;
 
         public formPrincipal()
         {
             InitializeComponent();
             if (!ConexionBd.conectar()) 
                 MessageBox.Show("Error: No se ha podido conectar con la base de datos");
-            usuario = new Usuario();           
+            this.usuario = new Usuario();
+
+            this.ventanaProgreso = new VentanaProgreso();
         }
 
         #region Funcionalidades ventana principal
@@ -152,6 +155,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnEnProgreso_Click(object sender, EventArgs e)
         {
+            this.ventanaProgreso.Show();
             desactivarPanelesActive();
             panelBtn2Active.Visible = true;
         }
