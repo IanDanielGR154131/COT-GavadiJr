@@ -61,7 +61,7 @@ namespace Control_Ordenes_Trabajo
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)
         {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(244, 244, 244));
+            SolidBrush blueBrush = new SolidBrush(Color.White);
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
 
             base.OnPaint(e);

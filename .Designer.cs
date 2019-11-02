@@ -251,7 +251,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panelTitulo.Controls.Add(this.label1);
             this.panelTitulo.Controls.Add(this.btnMin);
             this.panelTitulo.Controls.Add(this.btnMax);

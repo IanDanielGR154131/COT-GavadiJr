@@ -103,5 +103,25 @@ namespace Control_Ordenes_Trabajo
         {
             this.limpiar();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel1.ClientRectangle, Color.FromArgb(188, 189, 191), ButtonBorderStyle.Solid);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel3.ClientRectangle, Color.FromArgb(188, 189, 191), ButtonBorderStyle.Solid);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel4.ClientRectangle, Color.FromArgb(188, 189, 191), ButtonBorderStyle.Solid);
+        }
+
+        private void panel1_Resize(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
     }
 }

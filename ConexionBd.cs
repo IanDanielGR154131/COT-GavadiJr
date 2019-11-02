@@ -18,8 +18,13 @@ namespace Control_Ordenes_Trabajo
         //Conecta con la base de datos
         public static bool conectar()
         {
-            cadena = "Data Source = LAPTOP-TGJ8N1S4; Initial Catalog = GavadiJr;"+
+            string cadenaMartin = "Data Source = LAPTOP-TGJ8N1S4; Initial Catalog = GavadiJr;" +
                           "Integrated Security = True";
+
+            string cadenaIan = "Data Source = DESKTOP-F5KKISN\\SQLEXPRESS; Initial Catalog = GavadiJr;" +
+                          "Integrated Security = True";
+
+            cadena = cadenaIan;
             con = new SqlConnection(cadena);
             try
             {
