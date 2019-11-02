@@ -72,16 +72,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -562,6 +562,35 @@
             this.panel2.Size = new System.Drawing.Size(976, 275);
             this.panel2.TabIndex = 48;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.txtColorManga);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.txtCantPecho);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.txtTipoGorra);
+            this.panel4.Controls.Add(this.txtCantGorra);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.txtTipoManga);
+            this.panel4.Controls.Add(this.txtTipoTrabilla);
+            this.panel4.Controls.Add(this.txtTipoPecho);
+            this.panel4.Controls.Add(this.txtCantTrabilla);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.txtColorPecho);
+            this.panel4.Controls.Add(this.txtColorGorra);
+            this.panel4.Controls.Add(this.txtColorTrabilla);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.txtCantManga);
+            this.panel4.Location = new System.Drawing.Point(501, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(475, 275);
+            this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -591,6 +620,7 @@
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
@@ -613,6 +643,7 @@
             // 
             this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
@@ -657,35 +688,6 @@
             this.panel3.TabIndex = 46;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.txtColorManga);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.txtCantPecho);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.txtTipoGorra);
-            this.panel4.Controls.Add(this.txtCantGorra);
-            this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.txtTipoManga);
-            this.panel4.Controls.Add(this.txtTipoTrabilla);
-            this.panel4.Controls.Add(this.txtTipoPecho);
-            this.panel4.Controls.Add(this.txtCantTrabilla);
-            this.panel4.Controls.Add(this.label21);
-            this.panel4.Controls.Add(this.txtColorPecho);
-            this.panel4.Controls.Add(this.txtColorGorra);
-            this.panel4.Controls.Add(this.txtColorTrabilla);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.txtCantManga);
-            this.panel4.Location = new System.Drawing.Point(501, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(475, 275);
-            this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
             // VentanaRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,10 +705,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

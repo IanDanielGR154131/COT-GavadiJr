@@ -155,7 +155,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnEnProgreso_Click(object sender, EventArgs e)
         {
-            this.ventanaProgreso.Show();
+            AbrirFormulario<VentanaProgreso>();
             desactivarPanelesActive();
             panelBtn2Active.Visible = true;
         }
