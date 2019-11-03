@@ -215,5 +215,10 @@ namespace Control_Ordenes_Trabajo
         {
             Invalidate();
         }
+
+        private void panel4_Resize(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
     }
 }

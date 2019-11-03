@@ -59,7 +59,7 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelPrincipal.BackColor = System.Drawing.Color.Black;
             this.panelPrincipal.Controls.Add(this.panelForms);
             this.panelPrincipal.Controls.Add(this.panelMenu);
             this.panelPrincipal.Controls.Add(this.panelTitulo);
@@ -92,7 +92,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(217)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
             this.panelMenu.Controls.Add(this.panelBtn2Active);
             this.panelMenu.Controls.Add(this.panelBtn3Active);
             this.panelMenu.Controls.Add(this.panelBtn1Active);
@@ -110,7 +110,7 @@
             // 
             // panelBtn2Active
             // 
-            this.panelBtn2Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn2Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.panelBtn2Active.Location = new System.Drawing.Point(0, 124);
             this.panelBtn2Active.Name = "panelBtn2Active";
             this.panelBtn2Active.Size = new System.Drawing.Size(5, 43);
@@ -119,7 +119,7 @@
             // 
             // panelBtn3Active
             // 
-            this.panelBtn3Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn3Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.panelBtn3Active.Location = new System.Drawing.Point(0, 173);
             this.panelBtn3Active.Name = "panelBtn3Active";
             this.panelBtn3Active.Size = new System.Drawing.Size(5, 43);
@@ -128,7 +128,7 @@
             // 
             // panelBtn1Active
             // 
-            this.panelBtn1Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.panelBtn1Active.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.panelBtn1Active.Location = new System.Drawing.Point(0, 75);
             this.panelBtn1Active.Name = "panelBtn1Active";
             this.panelBtn1Active.Size = new System.Drawing.Size(5, 43);
@@ -141,7 +141,7 @@
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
@@ -163,7 +163,7 @@
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -195,7 +195,7 @@
             this.btnFinalizadas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFinalizadas.FlatAppearance.BorderSize = 0;
             this.btnFinalizadas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.btnFinalizadas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnFinalizadas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
             this.btnFinalizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizadas.ForeColor = System.Drawing.Color.White;
@@ -216,7 +216,7 @@
             this.btnEnProgreso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnProgreso.FlatAppearance.BorderSize = 0;
             this.btnEnProgreso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.btnEnProgreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnEnProgreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
             this.btnEnProgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnProgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnProgreso.ForeColor = System.Drawing.Color.White;
@@ -234,11 +234,11 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(217)))));
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(18)))), ((int)(((byte)(24)))));
-            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(27)))), ((int)(((byte)(36)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(103)))), ((int)(((byte)(109)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
@@ -256,7 +256,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.panelTitulo.Controls.Add(this.label1);
             this.panelTitulo.Controls.Add(this.btnMin);
             this.panelTitulo.Controls.Add(this.btnMax);
@@ -284,36 +284,46 @@
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(1092, 12);
+            this.btnMin.Location = new System.Drawing.Point(1068, 0);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(21, 20);
+            this.btnMin.Size = new System.Drawing.Size(40, 40);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMin.TabIndex = 2;
             this.btnMin.TabStop = false;
             this.btnMin.Click += new System.EventHandler(this.BtnMin_Click);
+            this.btnMin.MouseEnter += new System.EventHandler(this.btnMin_MouseEnter);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
             // 
             // btnMax
             // 
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
-            this.btnMax.Location = new System.Drawing.Point(1130, 12);
+            this.btnMax.Location = new System.Drawing.Point(1114, 0);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(21, 20);
+            this.btnMax.Size = new System.Drawing.Size(40, 40);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMax.TabIndex = 1;
             this.btnMax.TabStop = false;
             this.btnMax.Click += new System.EventHandler(this.BtnMax_Click);
+            this.btnMax.MouseEnter += new System.EventHandler(this.btnMax_MouseEnter);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1167, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(1160, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(21, 20);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             // 
             // formPrincipal
             // 

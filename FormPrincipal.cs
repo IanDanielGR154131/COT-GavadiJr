@@ -182,5 +182,36 @@ namespace Control_Ordenes_Trabajo
             this.usuario.logout();
             MessageBox.Show("Usted ha cerrado sesión");
         }
+
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
+        private void btnMax_MouseEnter(object sender, EventArgs e)
+        {
+            btnMax.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnMax_MouseLeave(object sender, EventArgs e)
+        {
+            btnMax.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
+        private void btnMin_MouseEnter(object sender, EventArgs e)
+        {
+            btnMin.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnMin_MouseLeave(object sender, EventArgs e)
+        {
+            btnMin.BackColor = Color.FromArgb(72, 72, 72);
+        }
+
     }
 }
