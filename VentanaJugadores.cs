@@ -44,6 +44,22 @@ namespace Control_Ordenes_Trabajo
             this.tablaJugadores.Clear();
             this.adapterJugadores.Fill(this.tablaJugadores);
         }
+        
+        //Evento de error en el DataGrid
+        private void dataGridJugadores_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(e.Exception.Message);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+         // se creo por error jeje
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         //Botón Agregar
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -66,12 +82,6 @@ namespace Control_Ordenes_Trabajo
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        
-        //Evento de error en el DataGrid
-        private void dataGridJugadores_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            MessageBox.Show(e.Exception.Message);
         }
     }
 }
