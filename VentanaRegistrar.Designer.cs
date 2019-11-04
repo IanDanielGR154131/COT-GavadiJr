@@ -96,7 +96,7 @@
             // txtNombreEquipo
             // 
             this.txtNombreEquipo.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEquipo.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNombreEquipo.Location = new System.Drawing.Point(253, 77);
             this.txtNombreEquipo.Name = "txtNombreEquipo";
             this.txtNombreEquipo.Size = new System.Drawing.Size(223, 23);
@@ -107,7 +107,7 @@
             // 
             this.txtMaterialEspalda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaterialEspalda.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaterialEspalda.ForeColor = System.Drawing.Color.Black;
+            this.txtMaterialEspalda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaterialEspalda.Location = new System.Drawing.Point(602, 76);
             this.txtMaterialEspalda.Name = "txtMaterialEspalda";
             this.txtMaterialEspalda.Size = new System.Drawing.Size(229, 23);
@@ -128,7 +128,7 @@
             // txtTipoLogo
             // 
             this.txtTipoLogo.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoLogo.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoLogo.Location = new System.Drawing.Point(110, 116);
             this.txtTipoLogo.Name = "txtTipoLogo";
             this.txtTipoLogo.Size = new System.Drawing.Size(130, 23);
@@ -138,7 +138,7 @@
             // txtColorLogo
             // 
             this.txtColorLogo.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorLogo.ForeColor = System.Drawing.Color.Black;
+            this.txtColorLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorLogo.Location = new System.Drawing.Point(263, 116);
             this.txtColorLogo.Name = "txtColorLogo";
             this.txtColorLogo.Size = new System.Drawing.Size(130, 23);
@@ -181,7 +181,7 @@
             // txtTipoNumEspalda
             // 
             this.txtTipoNumEspalda.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoNumEspalda.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoNumEspalda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoNumEspalda.Location = new System.Drawing.Point(110, 142);
             this.txtTipoNumEspalda.Name = "txtTipoNumEspalda";
             this.txtTipoNumEspalda.Size = new System.Drawing.Size(130, 23);
@@ -191,7 +191,7 @@
             // txtColorNumEspalda
             // 
             this.txtColorNumEspalda.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorNumEspalda.ForeColor = System.Drawing.Color.Black;
+            this.txtColorNumEspalda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorNumEspalda.Location = new System.Drawing.Point(263, 142);
             this.txtColorNumEspalda.Name = "txtColorNumEspalda";
             this.txtColorNumEspalda.Size = new System.Drawing.Size(130, 23);
@@ -201,7 +201,7 @@
             // txtTipoNumFrente
             // 
             this.txtTipoNumFrente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoNumFrente.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoNumFrente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoNumFrente.Location = new System.Drawing.Point(110, 168);
             this.txtTipoNumFrente.Name = "txtTipoNumFrente";
             this.txtTipoNumFrente.Size = new System.Drawing.Size(130, 23);
@@ -211,7 +211,7 @@
             // txtColorNumFrente
             // 
             this.txtColorNumFrente.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorNumFrente.ForeColor = System.Drawing.Color.Black;
+            this.txtColorNumFrente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorNumFrente.Location = new System.Drawing.Point(263, 168);
             this.txtColorNumFrente.Name = "txtColorNumFrente";
             this.txtColorNumFrente.Size = new System.Drawing.Size(130, 23);
@@ -221,7 +221,7 @@
             // txtTipoNumPantalonera
             // 
             this.txtTipoNumPantalonera.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoNumPantalonera.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoNumPantalonera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoNumPantalonera.Location = new System.Drawing.Point(110, 195);
             this.txtTipoNumPantalonera.Name = "txtTipoNumPantalonera";
             this.txtTipoNumPantalonera.Size = new System.Drawing.Size(130, 23);
@@ -231,7 +231,7 @@
             // txtColorNumPantalonera
             // 
             this.txtColorNumPantalonera.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorNumPantalonera.ForeColor = System.Drawing.Color.Black;
+            this.txtColorNumPantalonera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorNumPantalonera.Location = new System.Drawing.Point(263, 196);
             this.txtColorNumPantalonera.Name = "txtColorNumPantalonera";
             this.txtColorNumPantalonera.Size = new System.Drawing.Size(130, 23);
@@ -263,7 +263,7 @@
             // txtTipoApellidos
             // 
             this.txtTipoApellidos.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoApellidos.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoApellidos.Location = new System.Drawing.Point(110, 222);
             this.txtTipoApellidos.Name = "txtTipoApellidos";
             this.txtTipoApellidos.Size = new System.Drawing.Size(130, 23);
@@ -273,7 +273,7 @@
             // txtColorApellidos
             // 
             this.txtColorApellidos.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorApellidos.ForeColor = System.Drawing.Color.Black;
+            this.txtColorApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorApellidos.Location = new System.Drawing.Point(263, 222);
             this.txtColorApellidos.Name = "txtColorApellidos";
             this.txtColorApellidos.Size = new System.Drawing.Size(130, 23);
@@ -451,7 +451,7 @@
             // 
             this.txtColorManga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColorManga.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorManga.ForeColor = System.Drawing.Color.Black;
+            this.txtColorManga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorManga.Location = new System.Drawing.Point(251, 169);
             this.txtColorManga.Name = "txtColorManga";
             this.txtColorManga.Size = new System.Drawing.Size(130, 23);
@@ -475,7 +475,7 @@
             // 
             this.txtCantPecho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantPecho.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantPecho.ForeColor = System.Drawing.Color.Black;
+            this.txtCantPecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCantPecho.Location = new System.Drawing.Point(395, 143);
             this.txtCantPecho.Name = "txtCantPecho";
             this.txtCantPecho.Size = new System.Drawing.Size(60, 23);
@@ -498,7 +498,7 @@
             // 
             this.txtTipoGorra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipoGorra.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoGorra.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoGorra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoGorra.Location = new System.Drawing.Point(110, 116);
             this.txtTipoGorra.Name = "txtTipoGorra";
             this.txtTipoGorra.Size = new System.Drawing.Size(130, 23);
@@ -509,7 +509,7 @@
             // 
             this.txtCantGorra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantGorra.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantGorra.ForeColor = System.Drawing.Color.Black;
+            this.txtCantGorra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCantGorra.Location = new System.Drawing.Point(395, 116);
             this.txtCantGorra.Name = "txtCantGorra";
             this.txtCantGorra.Size = new System.Drawing.Size(60, 23);
@@ -556,7 +556,7 @@
             // 
             this.txtTipoManga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipoManga.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoManga.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoManga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoManga.Location = new System.Drawing.Point(110, 168);
             this.txtTipoManga.Name = "txtTipoManga";
             this.txtTipoManga.Size = new System.Drawing.Size(130, 23);
@@ -567,7 +567,7 @@
             // 
             this.txtTipoTrabilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipoTrabilla.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoTrabilla.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoTrabilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoTrabilla.Location = new System.Drawing.Point(110, 195);
             this.txtTipoTrabilla.Name = "txtTipoTrabilla";
             this.txtTipoTrabilla.Size = new System.Drawing.Size(130, 23);
@@ -578,7 +578,7 @@
             // 
             this.txtTipoPecho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipoPecho.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoPecho.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoPecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoPecho.Location = new System.Drawing.Point(110, 143);
             this.txtTipoPecho.Name = "txtTipoPecho";
             this.txtTipoPecho.Size = new System.Drawing.Size(130, 23);
@@ -589,7 +589,7 @@
             // 
             this.txtCantTrabilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantTrabilla.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantTrabilla.ForeColor = System.Drawing.Color.Black;
+            this.txtCantTrabilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCantTrabilla.Location = new System.Drawing.Point(395, 195);
             this.txtCantTrabilla.Name = "txtCantTrabilla";
             this.txtCantTrabilla.Size = new System.Drawing.Size(60, 23);
@@ -612,7 +612,7 @@
             // 
             this.txtColorPecho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColorPecho.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorPecho.ForeColor = System.Drawing.Color.Black;
+            this.txtColorPecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorPecho.Location = new System.Drawing.Point(251, 143);
             this.txtColorPecho.Name = "txtColorPecho";
             this.txtColorPecho.Size = new System.Drawing.Size(130, 23);
@@ -623,7 +623,7 @@
             // 
             this.txtColorGorra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColorGorra.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorGorra.ForeColor = System.Drawing.Color.Black;
+            this.txtColorGorra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorGorra.Location = new System.Drawing.Point(251, 116);
             this.txtColorGorra.Name = "txtColorGorra";
             this.txtColorGorra.Size = new System.Drawing.Size(130, 23);
@@ -634,7 +634,7 @@
             // 
             this.txtColorTrabilla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColorTrabilla.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorTrabilla.ForeColor = System.Drawing.Color.Black;
+            this.txtColorTrabilla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtColorTrabilla.Location = new System.Drawing.Point(251, 195);
             this.txtColorTrabilla.Name = "txtColorTrabilla";
             this.txtColorTrabilla.Size = new System.Drawing.Size(130, 23);
@@ -669,7 +669,7 @@
             // 
             this.txtCantManga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantManga.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantManga.ForeColor = System.Drawing.Color.Black;
+            this.txtCantManga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCantManga.Location = new System.Drawing.Point(395, 169);
             this.txtCantManga.Name = "txtCantManga";
             this.txtCantManga.Size = new System.Drawing.Size(60, 23);

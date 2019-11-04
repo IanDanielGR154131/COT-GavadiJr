@@ -33,18 +33,33 @@ namespace Control_Ordenes_Trabajo
             dataGridOrdenes.DataSource = this.tablaOrdenes;
         }
 
-        //Boton modificar
-        private void btnModificar_Click(object sender, EventArgs e)
+        //Evento de la eleminacion de un renglon del Data Grid
+        private void dataGridOrdenes_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            Orden orden = new Orden();
-            orden.setId(dataGridOrdenes.CurrentRow.Cells[0].Value.ToString());
-            ConexionBd.llenarOrden(orden);
-            VentanaRegistrar vn = new VentanaRegistrar(orden);
-            vn.Show();
+            adapterOrdenes.Update(tablaOrdenes);
         }
 
-        //Boton finalizar
-        private void btnFinalizar_Click(object sender, EventArgs e)
+        //Boton recargar
+        private void btnActualizar_Click_1(object sender, EventArgs e)
+        {
+            ConexionBd.actualizarAdapter(adapterOrdenes, tablaOrdenes);
+        }
+
+        //Boton agregar jugadores
+        private void btnJugadores_Click_1(object sender, EventArgs e)
+        {
+            string idDeOrden = dataGridOrdenes.CurrentRow.Cells[0].Value.ToString();
+            VentanaJugadores ventanaJugadores = new VentanaJugadores(idDeOrden);
+            ventanaJugadores.ShowDialog();
+        }
+         //Boton exportar
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+         
+        //Boton Finalizar
+        private void btnFinalizar_Click_1(object sender, EventArgs e)
         {
             string idDeOrden = dataGridOrdenes.CurrentRow.Cells[0].Value.ToString();
             if (ConexionBd.finalizarOrden(idDeOrden))
@@ -61,33 +76,16 @@ namespace Control_Ordenes_Trabajo
             }
             else
                 MessageBox.Show("Problema al finalizar la orden");
-
-
         }
 
-        //Boton generar reporte
-        private void btnReporte_Click(object sender, EventArgs e)
+        //Boton modificar
+        private void btnModificar_Click_1(object sender, EventArgs e)
         {
-        }
-
-        //Boton agregar jugadores
-        private void btnJugadores_Click(object sender, EventArgs e)
-        {
-            string idDeOrden = dataGridOrdenes.CurrentRow.Cells[0].Value.ToString();
-            VentanaJugadores ventanaJugadores = new VentanaJugadores(idDeOrden);
-            ventanaJugadores.ShowDialog();
-        }
-
-        //Boton recargar
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            ConexionBd.actualizarAdapter(adapterOrdenes, tablaOrdenes);
-        }
-
-        //Evento de la eleminacion de un renglon del Data Grid
-        private void dataGridOrdenes_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
-        {
-            adapterOrdenes.Update(tablaOrdenes);
+            Orden orden = new Orden();
+            orden.setId(dataGridOrdenes.CurrentRow.Cells[0].Value.ToString());
+            ConexionBd.llenarOrden(orden);
+            VentanaRegistrar vn = new VentanaRegistrar(orden);
+            vn.Show();
         }
     }
 }
