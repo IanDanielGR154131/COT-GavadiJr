@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,7 +29,10 @@ namespace Control_Ordenes_Trabajo
             InitializeComponent();
             this.usuario = new Usuario();
             this.orden = o; 
-            this.llenarForm();          
+            this.llenarForm();
+            this.btnLimpiar.Hide();
+            this.btnRegistrar.Text = "    Modificar";
+            this.panelTitulo.Show();
         }
 
         //Llena el objeto orden
@@ -219,6 +223,33 @@ namespace Control_Ordenes_Trabajo
         private void panel4_Resize(object sender, EventArgs e)
         {
             Invalidate();
+        }
+
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelTitulo_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

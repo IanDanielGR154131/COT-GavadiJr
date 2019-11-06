@@ -83,6 +83,16 @@ namespace Control_Ordenes_Trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(64, 64, 64);
+        }
     }
 }
 

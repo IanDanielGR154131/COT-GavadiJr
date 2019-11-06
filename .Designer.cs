@@ -60,6 +60,7 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Black;
+            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPrincipal.Controls.Add(this.panelForms);
             this.panelPrincipal.Controls.Add(this.panelMenu);
             this.panelPrincipal.Controls.Add(this.panelTitulo);
@@ -76,7 +77,7 @@
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Location = new System.Drawing.Point(200, 40);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1000, 560);
+            this.panelForms.Size = new System.Drawing.Size(998, 558);
             this.panelForms.TabIndex = 2;
             // 
             // pictureBox1
@@ -85,7 +86,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 560);
+            this.pictureBox1.Size = new System.Drawing.Size(998, 558);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -105,7 +106,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 40);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 560);
+            this.panelMenu.Size = new System.Drawing.Size(200, 558);
             this.panelMenu.TabIndex = 1;
             // 
             // panelBtn2Active
@@ -147,7 +148,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 517);
+            this.btnLogout.Location = new System.Drawing.Point(0, 515);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(200, 43);
@@ -169,7 +170,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(0, 467);
+            this.btnLogin.Location = new System.Drawing.Point(0, 465);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLogin.Size = new System.Drawing.Size(200, 43);
@@ -264,7 +265,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1200, 40);
+            this.panelTitulo.Size = new System.Drawing.Size(1198, 40);
             this.panelTitulo.TabIndex = 0;
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseMove);
             // 
@@ -284,7 +285,7 @@
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(1068, 0);
+            this.btnMin.Location = new System.Drawing.Point(1066, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(40, 40);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -299,7 +300,7 @@
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
-            this.btnMax.Location = new System.Drawing.Point(1114, 0);
+            this.btnMax.Location = new System.Drawing.Point(1112, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(40, 40);
             this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -315,7 +316,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1160, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1158, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

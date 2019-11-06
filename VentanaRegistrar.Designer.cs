@@ -77,9 +77,16 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtCantManga = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -108,7 +115,7 @@
             this.txtMaterialEspalda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaterialEspalda.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaterialEspalda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaterialEspalda.Location = new System.Drawing.Point(602, 76);
+            this.txtMaterialEspalda.Location = new System.Drawing.Point(600, 76);
             this.txtMaterialEspalda.Name = "txtMaterialEspalda";
             this.txtMaterialEspalda.Size = new System.Drawing.Size(229, 23);
             this.txtMaterialEspalda.TabIndex = 6;
@@ -301,9 +308,9 @@
             this.panel1.Controls.Add(this.txtNombreEquipo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtMaterialEspalda);
-            this.panel1.Location = new System.Drawing.Point(12, 25);
+            this.panel1.Location = new System.Drawing.Point(12, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 135);
+            this.panel1.Size = new System.Drawing.Size(974, 135);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Resize += new System.EventHandler(this.panel1_Resize);
@@ -314,7 +321,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(499, 80);
+            this.label4.Location = new System.Drawing.Point(497, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 16);
             this.label4.TabIndex = 5;
@@ -326,7 +333,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(421, 19);
+            this.label1.Location = new System.Drawing.Point(420, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 16);
             this.label1.TabIndex = 0;
@@ -358,7 +365,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(513, 485);
+            this.btnRegistrar.Location = new System.Drawing.Point(512, 491);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRegistrar.Size = new System.Drawing.Size(120, 43);
@@ -381,7 +388,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(359, 485);
+            this.btnLimpiar.Location = new System.Drawing.Point(358, 491);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLimpiar.Size = new System.Drawing.Size(130, 43);
@@ -411,7 +418,7 @@
             this.panel3.Controls.Add(this.txtTipoNumPantalonera);
             this.panel3.Controls.Add(this.txtTipoNumEspalda);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Location = new System.Drawing.Point(12, 179);
+            this.panel3.Location = new System.Drawing.Point(12, 199);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(477, 275);
             this.panel3.TabIndex = 2;
@@ -440,7 +447,7 @@
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.txtCantManga);
-            this.panel4.Location = new System.Drawing.Point(514, 179);
+            this.panel4.Location = new System.Drawing.Point(511, 199);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(475, 275);
             this.panel4.TabIndex = 3;
@@ -676,17 +683,68 @@
             this.txtCantManga.TabIndex = 36;
             this.txtCantManga.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panelTitulo);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.btnRegistrar);
+            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 560);
+            this.panel2.TabIndex = 5;
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelTitulo.Controls.Add(this.label3);
+            this.panelTitulo.Controls.Add(this.btnCerrar);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(998, 30);
+            this.panelTitulo.TabIndex = 14;
+            this.panelTitulo.Visible = false;
+            this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Modificar orden";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(968, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            // 
             // VentanaRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 560);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VentanaRegistrar";
             this.Text = "VentanaRegistrar";
@@ -696,6 +754,10 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -749,5 +811,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtCantManga;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelTitulo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox btnCerrar;
     }
 }

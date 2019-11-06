@@ -190,7 +190,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
-            btnCerrar.BackColor = Color.FromArgb(72, 72, 72);
+            btnCerrar.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void btnMax_MouseEnter(object sender, EventArgs e)
@@ -200,7 +200,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnMax_MouseLeave(object sender, EventArgs e)
         {
-            btnMax.BackColor = Color.FromArgb(72, 72, 72);
+            btnMax.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void btnMin_MouseEnter(object sender, EventArgs e)
@@ -210,7 +210,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnMin_MouseLeave(object sender, EventArgs e)
         {
-            btnMin.BackColor = Color.FromArgb(72, 72, 72);
+            btnMin.BackColor = Color.FromArgb(64, 64, 64);
         }
 
     }

@@ -20,8 +20,23 @@ namespace Control_Ordenes_Trabajo
             this.usuario = usuario;
         }
 
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(133, 133, 133);
+        }
+
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrar.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //Boton Login
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             if (this.usuario.login(txtPassword.Text))
             {
@@ -32,7 +47,7 @@ namespace Control_Ordenes_Trabajo
             {
                 MessageBox.Show("Contraseña equivocada");
                 txtPassword.Clear();
-            }            
+            }
         }
     }
 }
