@@ -164,7 +164,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnFinalizadas_Click(object sender, EventArgs e)
         {
-            this.ventanaFinalizadas.Show();
+            AbrirFormulario<VentanaFinalizadas>();
             desactivarPanelesActive();
             panelBtn3Active.Visible = true;
         }
