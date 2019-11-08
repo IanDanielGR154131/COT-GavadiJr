@@ -15,7 +15,8 @@ namespace Control_Ordenes_Trabajo
     {
         private Usuario usuario;
         private VentanaLogin ventanaLogin;
-        private VentanaProgreso ventanaProgreso;
+        private VentanaFinalizadas ventanaFinalizadas;
+        //private VentanaProgreso ventanaProgreso;
 
         public formPrincipal()
         {
@@ -24,7 +25,8 @@ namespace Control_Ordenes_Trabajo
                 MessageBox.Show("Error: No se ha podido conectar con la base de datos");
             this.usuario = new Usuario();
 
-            this.ventanaProgreso = new VentanaProgreso();
+            //this.ventanaProgreso = new VentanaProgreso();.
+            this.ventanaFinalizadas = new VentanaFinalizadas();
         }
 
         #region Funcionalidades ventana principal
@@ -162,6 +164,7 @@ namespace Control_Ordenes_Trabajo
 
         private void btnFinalizadas_Click(object sender, EventArgs e)
         {
+            this.ventanaFinalizadas.Show();
             desactivarPanelesActive();
             panelBtn3Active.Visible = true;
         }

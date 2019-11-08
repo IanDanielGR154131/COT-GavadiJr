@@ -165,8 +165,8 @@ namespace Control_Ordenes_Trabajo
                 MessageBox.Show("Usted no tiene permiso para realizar esta acción");
                 return;
             }
-            this.llenarOrden();
 
+            this.llenarOrden();
             //Si es una orden nueva, muestra la ventana de jugadores
             if (this.orden.getId() == "")
             {

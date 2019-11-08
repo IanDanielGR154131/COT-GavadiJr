@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Control_Ordenes_Trabajo
 {
-    public static class ConexionBd
+    public static class ConexionBd 
     {
         public static string cadena;
         public static SqlConnection con;        
@@ -16,7 +16,7 @@ namespace Control_Ordenes_Trabajo
         public static SqlDataReader reader;
         
         //Conecta con la base de datos
-        public static bool conectar()
+        public static bool conectar() 
         {
             string cadenaMartin = "Data Source = LAPTOP-TGJ8N1S4; Initial Catalog = GavadiJr;" +
                           "Integrated Security = True";
@@ -24,7 +24,7 @@ namespace Control_Ordenes_Trabajo
             string cadenaIan = "Data Source = DESKTOP-F5KKISN\\SQLEXPRESS; Initial Catalog = GavadiJr;" +
                           "Integrated Security = True";
 
-            cadena = cadenaIan;
+            cadena = cadenaMartin;
             con = new SqlConnection(cadena);
             try
             {
@@ -58,7 +58,6 @@ namespace Control_Ordenes_Trabajo
             }
             catch(Exception ex)
             {
-                Console.Write(ex.Message);
                 return false;
             }
         }
@@ -225,6 +224,17 @@ namespace Control_Ordenes_Trabajo
                 orden.listaBordados.Add(new Bordado(reader[1].ToString(), reader[3].ToString(), reader[2].ToString(), reader[4].ToString()));
             }
             reader.Close();
+        }
+
+        //Poner Orden en proceso
+        public static bool ponerEnProceso(string idDeOrden)
+        {
+            string consulta = "UPDATE OrdenesDeTrabajo SET estado = 1 WHERE id = {0}";
+            consulta = String.Format(consulta, idDeOrden);
+            if (ejecConsultaNonQuery(consulta))
+                return true;
+            else
+                return false;
         }
 
     }

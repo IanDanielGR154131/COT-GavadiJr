@@ -69,7 +69,9 @@ namespace Control_Ordenes_Trabajo
                     OpenFileDialog buscador = new OpenFileDialog();
                     buscador.ShowDialog();
                     if (ConexionBd.insertar(buscador.FileName, idDeOrden))
-                        ConexionBd.actualizarAdapter(adapterOrdenes, tablaOrdenes);
+                        ConexionBd.actualizarAdapter(this.adapterOrdenes, this.tablaOrdenes);
+                    else
+                        MessageBox.Show("Error al cargar imagen");
                 }
                 else
                     MessageBox.Show("Problema con eliminacion de jugadores");
