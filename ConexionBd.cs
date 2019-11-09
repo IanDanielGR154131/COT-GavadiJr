@@ -15,7 +15,7 @@ namespace Control_Ordenes_Trabajo
         public static SqlCommand command = new SqlCommand();
         public static SqlDataReader reader;
         
-        //Conecta con la base de datos
+        //Conecta con la base de datoss
         public static bool conectar() 
         {
             string cadenaMartin = "Data Source = DESKTOP-96CJ3JT; Initial Catalog = GavadiJr;" +
