@@ -55,6 +55,17 @@ namespace Control_Ordenes_Trabajo
          //Boton exportar
         private void btnExportar_Click(object sender, EventArgs e)
         {
+            string idDeOrden = dataGridOrdenes.CurrentRow.Cells[0].Value.ToString();
+            int cate;
+            cate = Convert.ToInt32(idDeOrden);
+            // TODO: esta línea de código carga datos en la tabla 'DataSet1.DataTable1' Puede moverla o quitarla según sea necesario.
+            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1, cate);
+            this.JugadoresTableAdapter.Fill(this.DataSet1.Jugadores,cate);
+            this.BordadosEnOrdenDetrabajoTableAdapter.Fill(this.DataSet1.BordadosEnOrdenDetrabajo,cate);
+            this.ElementosEnOrdenDeTrabajoTableAdapter.Fill(this.DataSet1.ElementosEnOrdenDeTrabajo,cate);
+            this.reportViewer1.RefreshReport();
+          
+            
 
         }
          
@@ -88,6 +99,22 @@ namespace Control_Ordenes_Trabajo
             ConexionBd.llenarOrden(orden);
             VentanaRegistrar vn = new VentanaRegistrar(orden);
             vn.Show();
+        }
+
+        private void VentanaProgreso_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
