@@ -24,7 +24,7 @@ namespace Control_Ordenes_Trabajo
             string cadenaIan = "Data Source = DESKTOP-F5KKISN\\SQLEXPRESS; Initial Catalog = GavadiJr;" +
                           "Integrated Security = True";
 
-            cadena = cadenaIan;
+            cadena = cadenaMartin;
             con = new SqlConnection(cadena);
             try
             {
